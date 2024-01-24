@@ -1,9 +1,9 @@
 import { ERRORMESSAGE } from "./constants.js";
-import getPatchToFile from "../getPatchToFile.js";
+import { getPathToFile } from "../getPaths.js";
 import { rm } from "node:fs/promises";
 
 const remove = async () => {
-  const pathToFile = getPatchToFile(
+  const pathToFile = getPathToFile(
     import.meta.url,
     "files",
     "fileToRemove.txt"

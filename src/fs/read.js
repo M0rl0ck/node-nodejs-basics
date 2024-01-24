@@ -1,9 +1,9 @@
 import { ERRORMESSAGE } from "./constants.js";
-import getPatchToFile from "../getPatchToFile.js";
+import { getPathToFile } from "../getPaths.js";
 import { readFile } from "node:fs/promises";
 
 const read = async () => {
-  const pathToFolder = getPatchToFile(
+  const pathToFolder = getPathToFile(
     import.meta.url,
     "files",
     "fileToRead.txt"
