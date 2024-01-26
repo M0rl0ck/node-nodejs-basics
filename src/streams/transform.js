@@ -10,6 +10,7 @@ const transform = async () => {
       callback(null, `${reversedString}\n`);
     },
   });
+  console.log("Print enything", "\n");
   await pipeline(stdin, reverseStream, stdout);
 };
 
